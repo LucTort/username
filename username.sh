@@ -1,12 +1,13 @@
 #! /bin/bash
-# zip.sh
-# author
+# username.sh
+# Lucas Torti
+echo "The username must be between 3-12 characters, start with a lower case letter, and contain only letters, numbers, and underscores."
 echo "Enter a username: "
-read INPUT
-while echo "$INPUT" | egrep -v "^[a-z][a-zA-Z0-9_]{2-11}$" > /dev/null 2>&1
+read USERNAME
+while echo "$USERNAME" | egrep -v "^[a-z][a-zA-z0-9_]{2,11}$" > /dev/null 2>&1
 do
-	echo "This username is invalid"
+	echo "The username must be between 3-12 characters, start with a lower case letter, and contain only letters, numbers, and underscores."
 	echo "Please enter a username: "
-	read INPUT
+	read USERNAME
 done
-echo "That username is utterly lacking in either style or taste. We will accept it nonetheless."
+echo "Username accepted. Thank you."
